@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>@lang('failedlogins::failedlogins.overview')</title>
+</head>
+<body>
+<h1>@lang('failedlogins::failedlogins.overview')</h1>
+<table>
+    <thead>
+    <tr>
+        <th>@lang('failedlogins::failedlogins.userid')</th>
+        <th>@lang('failedlogins::failedlogins.email')</th>
+        <th>@lang('failedlogins::failedlogins.ip_address')</th>
+        <th>@lang('failedlogins::failedlogins.date')</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    @forelse($failedlogins as $entry)
+        <tr>
+            <td>{{$entry->user_id}}</td>
+            <td>{{$entry->email_address}}</td>
+            <td>{{$entry->ip_address}}</td>
+            <td>{{$entry->created_at}}</td>
+        </tr>
+    @empty
+        <tr>
+            <td>@lang('failedlogins::failedlogins.nothingfound')</td>
+        </tr>
+    @endforelse
+    </tbody>
+</table>
+</body>
+</html>

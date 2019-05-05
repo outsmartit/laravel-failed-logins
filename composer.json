@@ -1,0 +1,26 @@
+{
+    "name": "outsmartit/failedlogins",
+    "description": "registering failed logins package for Laravel",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "diederik",
+            "email": "info@outsmartit.be"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Outsmartit\\Failedlogins\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Outsmartit\\Failedlogins\\FailedLoginsServiceProvider"
+            ]
+        }
+    }
+}
