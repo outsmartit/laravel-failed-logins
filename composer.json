@@ -1,16 +1,22 @@
 {
     "name": "outsmartit/failedlogins",
-    "description": "registering failed logins package for Laravel",
+    "description": "registering failed logins package for Laravel 5",
+    "keywords": [
+    "failed logins",
+    "laravel"
+  ],
+    "homepage": "https://github.com/outsmartit/failedlogins",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
             "name": "diederik",
-            "email": "info@outsmartit.be"
+            "email": "info@outsmartit.be",
+            "homepage": "https://outsmartit.be"
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {"laravel/framework": ">=5.5.0"},
     "autoload": {
         "psr-4": {
             "Outsmartit\\Failedlogins\\": "src/"
