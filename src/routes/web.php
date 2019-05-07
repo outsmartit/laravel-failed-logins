@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => ['web','auth']], function () {
     Route::get('failedlogins',
         'outsmartit\failedlogins\FailedLoginsController@index');
 });
