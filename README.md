@@ -17,6 +17,10 @@ The last logins can be checked via url \failedlogins.  The default number of log
 
 ## Publishing the view
 
+The standard view extends de "layouts.app" template and shows the last 10 failed logins in a bootstrap table layout.  If you want to change the styling you can publish and adapt the view using :
+
 ```bash
-vendor publish --provider=/outsmartit/failedlogins
+php artisan vendor:publish --provider="Outsmartit\Failedlogins\FailedLoginsServiceProvider"
 ```
+
+To change the number of shown failed logins, you can set the value of parameter "FAILEDLOGINS_LIST_MAX" in your .env file
